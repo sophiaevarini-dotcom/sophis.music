@@ -1,8 +1,79 @@
-h1 {
-    font-size: 50px;
-    color: rgb(3, 22, 126);
+/* 
+    🎵 CSS: O FIGURINO DO SITE!
+    Aqui a gente define CORES, TAMANHOS, ESPAÇOS e efeitos ESPECIAIS
+*/
+
+/* ---------- ESTILO DO CORPO (a página inteira) ---------- */
+body {
+    /* Fundo com degradê (transição suave entre cores) */
+    background: linear-gradient(135deg, #0a0a5e, #1a0a3e);
+    /* 135deg = diagonal | #0a0a5e = azul escuro | #1a0a3e = roxo escuro */
+
+    text-align: center;     /* Centraliza tudo que estiver dentro do body */
+    font-family: 'Trebuchet MS', Arial, sans-serif; /* Fonte bonita e profissional */
+    padding: 20px;          /* Dá um respiro nas bordas da página */
+    margin: 0;              /* Remove espaços extras do navegador */
+    min-height: 100vh;      /* Garante que o fundo ocupe a tela toda */
 }
 
-body {
-    background-color: rgb(6, 6, 95);
+/* ---------- ESTILO DO TÍTULO PRINCIPAL ---------- */
+h1 {
+    font-size: 70px;                /* Tamanho grande (como num cartaz de show!) */
+    color: #ffd700;                 /* Dourado brilhante (cor de luz de palco) */
+    margin-top: 30px;               /* Espaço em cima pra não ficar grudado */
+    margin-bottom: 20px;            /* Espaço embaixo antes do vídeo */
+    
+    /* ✨ EFEITO DE BRILHO (holofote no título!) */
+    text-shadow: 
+        0 0 20px #ffd700,           /* Brilho dourado próximo */
+        0 0 40px #ffaa00;           /* Brilho dourado mais distante */
+    
+    letter-spacing: 3px;            /* Espaço entre as letras (chique!) */
+    font-weight: bold;              /* Deixa o texto mais grosso (negrito) */
+}
+
+/* ---------- ESTILO DO VÍDEO (iframe) ---------- */
+iframe {
+    /* 📐 TAMANHOS RESPONSIVOS (se adapta à tela) */
+    width: 90%;                     /* Ocupa 90% da largura disponível */
+    max-width: 800px;               /* Mas não passa de 800px (tamanho ideal) */
+    height: 450px;                  /* Altura equilibrada (proporção 16:9) */
+    
+    /* 🎨 ESTILOS VISUAIS */
+    border-radius: 20px;            /* Bordas arredondadas (disco de vinil!) */
+    border: 3px solid #ffd700;      /* Moldura dourada fininha */
+    
+    /* ✨ SOMBRA (efeito de holofote) */
+    box-shadow: 
+        0 10px 40px rgba(255, 215, 0, 0.3); /* Sombra dourada suave */
+        /* 0 = horizontal | 10px = vertical | 40px = espalhamento */
+        /* rgba = vermelho, verde, azul, transparência */
+    
+    margin: 20px 0;                 /* Espaço em cima e embaixo */
+    display: block;                 /* Garante que o vídeo se comporte como bloco */
+    margin-left: auto;              /* Centraliza horizontalmente */
+    margin-right: auto;             /* Centraliza horizontalmente */
+}
+
+/* 
+    🎯 DICA DE OURO!
+    Se quiser testar cores diferentes, troque o #ffd700 (dourado)
+    por outras cores:
+    - #ff6b6b (vermelho) 
+    - #4ecdc4 (azul turquesa)
+    - #ff6bff (rosa)
+    - #ffffff (branco)
+*/
+
+/* ---------- ESTILO PARA TELAS MENORES (celular) ---------- */
+/* Isso é um "queridinho" que faz o site se adaptar no celular! */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 40px;        /* Título menor no celular */
+    }
+    
+    iframe {
+        height: 250px;          /* Vídeo menor no celular */
+        border-radius: 15px;    /* Borda um pouco menor */
+    }
 }
